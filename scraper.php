@@ -11,9 +11,9 @@ for($id = 1; $id <= $MAX_ID; $id++)
 {
   // // Read in a MCI doctor page
    $html = scraperwiki::scrape("https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.8280561779560743&crup=".$id);
+   $html = scraperwiki::scrape("https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.8280561779560743&crup=".$id);
 
    $dom = new simple_html_dom();
-   $dom->load($html);
    $dom->load($html);
 
 print_r($dom);
