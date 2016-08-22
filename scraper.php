@@ -1,4 +1,27 @@
 <?
+
+<?
+// This is a template for a PHP scraper on morph.io (https://morph.io)
+// including some code snippets below that you should find helpful
+require 'scraperwiki.php';
+require 'scraperwiki/simple_html_dom.php';
+//
+$MAX_ID = 3; //set based on required maximum numbers
+/** looping over list of ids of doctors **/
+for($id = 1; $id <= $MAX_ID; $id++)
+{
+  // // Read in a MCI doctor page
+   $html = scraperwiki::scrape("https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.8280561779560743&crup=".$id);
+
+   $dom = new simple_html_dom();
+   $dom->load($html);
+   $dom->load($html);
+
+print_r($dom);
+}
+
+
+
 // This is a template for a PHP scraper on morph.io (https://morph.io)
 // including some code snippets below that you should find helpful
 
